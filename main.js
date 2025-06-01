@@ -14,7 +14,9 @@ function emailValidation() {
 submitBtn.addEventListener("click", () => {
   if (emailValidation()) {
     submissionPage.style.display = "flex";
+    dismissBtn.style.display = "flex";
     signUpPage.style.display = "none";
+    submitBtn.style.display = "none";
     errorMsg.style.display = "none";
   } else {
     errorMsg.style.display = "block";
@@ -24,6 +26,8 @@ submitBtn.addEventListener("click", () => {
 
 dismissBtn.addEventListener("click", () => {
   submissionPage.style.display = "none";
+  dismissBtn.style.display = "none";
   signUpPage.style.display = "flex";
+  submitBtn.style.display = "flex";
   input.value = "";
 });
