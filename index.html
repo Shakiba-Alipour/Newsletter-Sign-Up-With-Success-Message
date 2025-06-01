@@ -14,11 +14,6 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -26,18 +21,62 @@
   <body>
     <!-- Sign-up form start -->
 
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
+    <section id="sign-up">
+      <img
+        id="illustration"
+        src="./assets/images/illustration-sign-up-mobile.svg"
+      />
+      <p>Stay updated!</p>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>
+          <img alt="icon-list" src="./assets/images/icon-list.svg" />
+          <p>Product discovery and building what matters</p>
+        </li>
+        <li>
+          <img alt="icon-list" src="./assets/images/icon-list.svg" />
+          <p>Measuring to ensure updates are a success</p>
+        </li>
+        <li>
+          <img alt="icon-list" src="./assets/images/icon-list.svg" />
+          <p>And much more!</p>
+        </li>
+      </ul>
+
+      <form novalidate>
+        <div id="form-title">
+          <p>Email address</p>
+          <p id="error">Valid email required</p>
+        </div>
+
+        <input
+          placeholder="email@company.com"
+          type="email"
+          name="email"
+          required
+        />
+      </form>
+
+      <button id="submit">Subscribe to monthly newsletter</button>
+    </section>
 
     <!-- Sign-up form end -->
 
     <!-- Success message start -->
 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
+    <section id="submission">
+      <div id="validation-content">
+        <img src="./assets/images/icon-list.svg" id="validation-icon" />
+        <p id="thanks-title">Thanks for subscribing!</p>
+        <p>
+          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+      </div>
+
+      <button id="dismiss">Dismiss message</button>
+    </section>
 
     <!-- Success message end -->
 
