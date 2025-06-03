@@ -4,6 +4,9 @@ const dismissBtn = document.getElementById("dismissBtn");
 const signUpPage = document.getElementById("sign-up");
 const submissionPage = document.getElementById("submission");
 const errorMsg = document.getElementById("error");
+const illustration = document.getElementById("illustration");
+const pageContent = document.getElementById("page-content");
+const body = document.getElementsByTagName("body")[0];
 
 function emailValidation() {
   const email = input.value.trim();
@@ -18,6 +21,12 @@ submitBtn.addEventListener("click", () => {
     signUpPage.style.display = "none";
     submitBtn.style.display = "none";
     errorMsg.style.display = "none";
+    illustration.style.display = "none";
+
+    if (window.innerWidth > 700) {
+      pageContent.style.width = "40%";
+      body.style.width = "min-content";
+    }
   } else {
     errorMsg.style.display = "block";
     input.focus();
@@ -28,6 +37,7 @@ dismissBtn.addEventListener("click", () => {
   submissionPage.style.display = "none";
   dismissBtn.style.display = "none";
   signUpPage.style.display = "flex";
+  illustration.style.display = "flex";
   submitBtn.style.display = "flex";
   input.value = "";
 });

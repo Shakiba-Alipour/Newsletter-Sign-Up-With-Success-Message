@@ -155,10 +155,12 @@ button {
   }
 
   body {
-    height: auto;
+    width: fit-content;
+    height: fit-content;
     border-radius: 1rem;
     justify-content: center;
     padding: 1.5rem;
+    margin: 2rem 0;
   }
 
   #page-content {
@@ -166,6 +168,8 @@ button {
     grid-template-areas:
       "a b"
       "c b";
+    align-items: center;
+    justify-content: center;
   }
 
   picture {
@@ -196,6 +200,16 @@ button {
   #submitBtn {
     grid-area: c;
     align-self: center;
+  }
+
+  #dismissBtn,
+  #submission {
+    width: 30%;
+  }
+
+  #dismissBtn:hover {
+    background-color: var(--Red);
+    border-color: var(--Red);
   }
 }
 
