@@ -31,7 +31,7 @@ section {
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 100%;
+  background-color: var(--White);
 }
 
 .title {
@@ -128,6 +128,16 @@ button {
 }
 
 @media screen and (max-width: 700px) {
+  body,
+  section {
+    height: 100%;
+  }
+
+  #page-content {
+    display: flex;
+    flex-direction: column;
+  }
+
   #illustration {
     width: 100%;
     top: 0;
@@ -136,9 +146,63 @@ button {
   }
 }
 
+@media screen and (min-width: 701px) {
+  html {
+    background-color: var(--Blue-800);
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+  body {
+    height: auto;
+    border-radius: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  #page-content {
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "c b";
+  }
+
+  picture {
+    grid-area: b;
+    grid-row: 1 / span 2;
+    align-self: stretch;
+    justify-self: stretch;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #illustration {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+  }
+
+  #sign-up {
+    grid-area: a;
+    align-self: center;
+  }
+
+  #submitBtn {
+    grid-area: c;
+    align-self: center;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 .attribution a {

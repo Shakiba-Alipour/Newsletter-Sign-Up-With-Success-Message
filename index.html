@@ -21,67 +21,78 @@
     </title>
   </head>
   <body>
-    <!-- Sign-up form start -->
-
-    <section id="sign-up">
-      <img
-        id="illustration"
-        src="./assets/images/illustration-sign-up-mobile.svg"
-      />
-      <p class="title">Stay updated!</p>
-      <p id="desctiption">
-        Join 60,000+ product managers receiving monthly updates on:
-      </p>
-      <ul>
-        <li>
-          <img alt="icon-list" src="./assets/images/icon-list.svg" />
-          <p>Product discovery and building what matters</p>
-        </li>
-        <li>
-          <img alt="icon-list" src="./assets/images/icon-list.svg" />
-          <p>Measuring to ensure updates are a success</p>
-        </li>
-        <li>
-          <img alt="icon-list" src="./assets/images/icon-list.svg" />
-          <p>And much more!</p>
-        </li>
-      </ul>
-
-      <form novalidate>
-        <div id="form-title">
-          <p id="email-title">Email address</p>
-          <p id="error">Valid email required</p>
-        </div>
-
-        <input
-          placeholder="email@company.com"
-          type="email"
-          name="email"
-          required
+    <div id="page-content">
+      <!-- Sign-up form start --><picture>
+        <source
+          srcset="./assets/images/illustration-sign-up-mobile.svg"
+          media="(max-width:700px)"
         />
-      </form>
-    </section>
+        <source
+          srcset="./assets/images/illustration-sign-up-desktop.svg"
+          media="(min-width:701px)"
+        />
+        <img
+          id="illustration"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+        />
+      </picture>
 
-    <button id="submitBtn">Subscribe to monthly newsletter</button>
-
-    <!-- Sign-up form end -->
-
-    <!-- Success message start -->
-
-    <section id="submission">
-      <div id="validation-content">
-        <img src="./assets/images/icon-list.svg" id="validation-icon" />
-        <p class="title">Thanks for subscribing!</p>
-        <p>
-          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
-          Please open it and click the button inside to confirm your
-          subscription.
+      <section id="sign-up">
+        <p class="title">Stay updated!</p>
+        <p id="desctiption">
+          Join 60,000+ product managers receiving monthly updates on:
         </p>
-      </div>
-    </section>
+        <ul>
+          <li>
+            <img alt="icon-list" src="./assets/images/icon-list.svg" />
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li>
+            <img alt="icon-list" src="./assets/images/icon-list.svg" />
+            <p>Measuring to ensure updates are a success</p>
+          </li>
+          <li>
+            <img alt="icon-list" src="./assets/images/icon-list.svg" />
+            <p>And much more!</p>
+          </li>
+        </ul>
 
-    <button id="dismissBtn">Dismiss message</button>
-    <!-- Success message end -->
+        <form novalidate>
+          <div id="form-title">
+            <p id="email-title">Email address</p>
+            <p id="error">Valid email required</p>
+          </div>
+
+          <input
+            placeholder="email@company.com"
+            type="email"
+            name="email"
+            required
+          />
+        </form>
+      </section>
+
+      <button id="submitBtn">Subscribe to monthly newsletter</button>
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <section id="submission">
+        <div id="validation-content">
+          <img src="./assets/images/icon-list.svg" id="validation-icon" />
+          <p class="title">Thanks for subscribing!</p>
+          <p>
+            A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+      </section>
+
+      <button id="dismissBtn">Dismiss message</button>
+      <!-- Success message end -->
+    </div>
 
     <div class="attribution">
       Challenge by
